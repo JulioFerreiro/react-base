@@ -1,19 +1,19 @@
 import React from 'react';
-// import { toast } from 'react-toastify';
+import { useDispatch } from 'react-redux';
+
 import { Title, Paragrafo } from './styled';
 import { Container } from '../../styles/GlobalStyles';
-import axios from '../../services/axios';
+import * as exampleActions from '../../store/modules/example/actions';
 
 export default function Login() {
-  React.useEffect(() => {
-    async function getData() {
-      const response = await axios.get('/alunos');
-      const { data } = response;
-      console.log(data);
-    }
+  const dispatch = useDispatch();
 
-    getData();
-  }, []);
+  function handleClick(e) {
+    e.preventDefault();
+
+    dispatch(exampleActions.clicaBotao());
+  }
+
   return (
     <Container>
       <Title>
@@ -21,7 +21,9 @@ export default function Login() {
         <small>Oie</small>
       </Title>
       <Paragrafo>Lorem ipsum dolor sit amet.</Paragrafo>
-      <button type="button">Enviar</button>
+      <button type="button" onClick={handleClick}>
+        Enviar
+      </button>
     </Container>
   );
 }
