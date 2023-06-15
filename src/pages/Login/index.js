@@ -20,7 +20,7 @@ export default function Login() {
         Login
         <small>Oie</small>
       </Title>
-      <Paragrafo>Lorem ipsum dolor sit amet.</Paragrafo>
+      <Paragrafo>Lorem llipsum dolor sit amet.</Paragrafo>
       <button type="button" onClick={handleClick}>
         Enviar
       </button>
