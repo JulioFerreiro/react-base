@@ -22,12 +22,17 @@ html, body, #root {
 
 button {
   cursor: pointer;
-  background: ${colors.primaryColor};
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-weight: 700;
+    background: ${colors.primaryColor};
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: all 300ms;
+}
+
+button:hover {
+  filter: brightness(85%);
 }
 
 a {
@@ -48,7 +53,7 @@ body .Toastify .Toastify__toast-container .Toastify__toast--error {
 `;
 
 export const Container = styled.section`
-  max-width: 360px;
+  max-width: 550px;
   background: #fff;
   margin: 30px auto;
   padding: 30px;
